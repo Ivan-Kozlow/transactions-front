@@ -3,7 +3,7 @@ import axios from 'axios'
 import { getTokenFromLocalStorage } from '../utils/localStorageUtils'
 
 const instance = axios.create({
-	baseURL: 'http://localhost:3000/api/',
+	baseURL: import.meta.env.DB_URL,
 	headers: {
 		Authorization: `Bearer ${getTokenFromLocalStorage()}`,
 	},
